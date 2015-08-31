@@ -1,6 +1,6 @@
 # node-c
 
-Embed C functions in JavaScript comments.
+Embed C functions in JavaScript comments. *Should* work on Linux and OS X.
 
 ### Flow
 
