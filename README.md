@@ -11,7 +11,7 @@ Embed C functions in JavaScript comments.
 
 
 ### Warning
-> There is non-trivial overhead associated with FFI calls. Comparing a hard-coded binding version of ```strtoul()``` to an FFI version of ```strtoul()``` shows that the native hard-coded binding is orders of magnitude faster. So don't just use the C version of a function just because it's faster. There's a significant cost in FFI calls, so make them worth it.
+> There is non-trivial overhead associated with FFI calls. Comparing a hard-coded binding version of ```strtoul()``` to an FFI version of ```strtoul()``` shows that the native hard-coded binding is orders of magnitude faster. So don't just use the C version of a function just because it's faster. There's a significant cost in FFI calls, so make them worth it. &mdash; [node-ffi/README.md](https://github.com/node-ffi/node-ffi/blob/master/README.md)
 
 ### Install
 
