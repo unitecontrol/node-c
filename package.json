@@ -1,0 +1,15 @@
+{
+  "name": "node-c",
+  "version": "0.1.0",
+  "description": "declare c bindings in javascript files",
+  "main": "main.js",
+  "dependencies": {
+    "cdefs": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Mateo Gianolio",
+  "license": "MIT"
+}
