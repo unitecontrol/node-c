@@ -1,7 +1,7 @@
 {
   "name": "node-c",
   "version": "0.1.0",
-  "description": "declare c bindings in javascript files",
+  "description": "embed C functions in JavaScript comments.",
   "main": "main.js",
   "dependencies": {
     "cdefs": "^0.3.2"
