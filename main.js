@@ -56,10 +56,6 @@
     if(!fs.existsSync('bindings'))
       exec('mkdir bindings');
 
-    // optional caching
-    if(cache === true && fs.existsSync('bindings/' + f + '.dylib'))
-      return ffi.Library('bindings/' + f, spec);
-
     // compile
     switch(os.platform()) {
       case 'darwin':
