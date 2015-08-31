@@ -1,6 +1,6 @@
 {
   "name": "node-c",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "embed C functions in JavaScript comments.",
   "main": "main.js",
   "dependencies": {
