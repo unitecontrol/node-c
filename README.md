@@ -33,7 +33,7 @@ $ npm install node-c
  * @param {String} filename
  * @param {Boolean} cache
  **/
-require('node-c')(filename, [cache=false]);
+module.exports = function(filename, [cache=false]);
 ```
 
 ```javascript
