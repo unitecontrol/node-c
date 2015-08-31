@@ -22,6 +22,12 @@ $ npm install node-c
 ### Syntax
 
 ```javascript
+// filename is the file in which to look for c functions
+// (__filename for current file)
+require('node-c')(<filename>);
+```
+
+```javascript
 var c = require('node-c')(__filename),
 
 /*?c

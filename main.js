@@ -60,9 +60,7 @@
       return ffi.Library('bindings/' + f, spec);
 
     // compile
-    process.stdout.write('compiling bindings/' + f + '.dylib ... ');
     exec('echo "' + out + '" | gcc -dynamiclib -undefined suppress -flat_namespace -o bindings/' + f + '.dylib -xc -');
-    console.log('done');
 
     return ffi.Library('bindings/' + f, spec);
   };
