@@ -24,9 +24,16 @@ $ npm install node-c
 ### Syntax
 
 ```javascript
-// filename is the file in which to look for c functions
-// (__filename for current file)
-require('node-c')(<filename>);
+/**
+ * The filename is the file in which to look for c functions
+ * (input __filename for current file).
+ *
+ * If caching is disabled the c code is
+ * recompiled every time this function is called.
+ * @param {String} filename
+ * @param {Boolean} cache
+ **/
+require('node-c')(filename, [cache=false]);
 ```
 
 ```javascript

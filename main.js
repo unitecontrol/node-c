@@ -1,7 +1,8 @@
 (function() {
   'use strict';
 
-  var fs = require('fs'),
+  var os = require('os'),
+      fs = require('fs'),
       ffi = require('ffi'),
       cdefs = require('cdefs'),
       exec = require('exec-sync');
@@ -60,7 +61,19 @@
       return ffi.Library('bindings/' + f, spec);
 
     // compile
-    exec('echo "' + out + '" | gcc -dynamiclib -undefined suppress -flat_namespace -o bindings/' + f + '.dylib -xc -');
+    switch(os.platform()) {
+      case 'darwin':
+        if(cache === true && fs.existsSync('bindings/' + f + '.dylib'))
+          break;
+
+        exec('echo "' + out + '" | gcc -dynamiclib -undefined suppress -flat_namespace -o bindings/' + f + '.dylib -xc -');
+        break;
+      case 'linux':
+        if(cache === true && fs.existsSync('bindings/' + f + '.so'))
+          break;
+        exec('echo "' + out + '" | gcc -shared -fpic -o bindings/' + f + '.so -xc -');
+        break;
+    }
 
     return ffi.Library('bindings/' + f, spec);
   };
