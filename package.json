@@ -4,9 +4,9 @@
   "description": "embed C functions in JavaScript comments.",
   "main": "main.js",
   "dependencies": {
-    "cdefs": "^0.3.2",
-    "exec-sync": "^0.1.6",
-    "ffi": "^1.3.2"
+    "cdefs": "*",
+    "exec-sync": "*",
+    "ffi": "*"
   },
   "devDependencies": {},
   "scripts": {
